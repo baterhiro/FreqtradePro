@@ -237,7 +237,7 @@ class Bitget(Exchange):
             )
         else:
             raise OperationalException(
-                "Freqtrade currently only supports isolated futures for bitget"
+                "FreqtradePro currently only supports isolated futures for bitget"
             )
 
     def check_delisting_time(self, pair: str) -> datetime | None:

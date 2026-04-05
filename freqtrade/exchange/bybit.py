@@ -220,7 +220,7 @@ class Bybit(Exchange):
 
         if self.trading_mode == TradingMode.FUTURES and self.margin_mode == MarginMode.ISOLATED:
             if market["inverse"]:
-                raise OperationalException("Freqtrade does not yet support inverse contracts")
+                raise OperationalException("FreqtradePro does not yet support inverse contracts")
             position_value = amount * open_rate
             initial_margin = position_value / leverage
             maintenance_margin = position_value * mm_ratio
@@ -234,7 +234,7 @@ class Bybit(Exchange):
 
         else:
             raise OperationalException(
-                "Freqtrade only supports isolated futures for leverage trading"
+                "FreqtradePro only supports isolated futures for leverage trading"
             )
 
     def get_funding_fees(

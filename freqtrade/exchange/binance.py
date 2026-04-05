@@ -373,7 +373,7 @@ class Binance(Exchange):
             ) / ((amount * mm_ratio) - (side_1 * amount))
         else:
             raise OperationalException(
-                "Freqtrade only supports isolated futures for leverage trading"
+                "FreqtradePro only supports isolated futures for leverage trading"
             )
 
     def load_leverage_tiers(self) -> dict[str, list[dict]]:

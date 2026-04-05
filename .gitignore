@@ -116,3 +116,8 @@ target/
 !config_examples/config_freqai.example.json
 
 docker-compose-*.yml
+.venv/
+*.sqlite
+__pycache__/
+/tmp/freqtrade.log
+nohup.out

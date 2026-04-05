@@ -1,4 +1,4 @@
-"""Freqtrade bot"""
+"""FreqtradePro bot"""
 
 __version__ = "2026.3"
 

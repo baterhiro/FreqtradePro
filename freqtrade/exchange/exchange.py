@@ -929,7 +929,7 @@ class Exchange:
                 trading_mode == pair[0] for pair in self._supported_trading_mode_margin_pairs
             ):
                 raise ConfigurationError(
-                    f"Freqtrade does not support '{trading_mode}' on {self.name}."
+                    f"FreqtradePro does not support '{trading_mode}' on {self.name}."
                 )
 
         if not allow_none_margin_mode and (
@@ -937,7 +937,7 @@ class Exchange:
         ):
             mm_value = margin_mode and margin_mode.value
             raise ConfigurationError(
-                f"Freqtrade does not support '{mm_value}' '{trading_mode}' on {self.name}."
+                f"FreqtradePro does not support '{mm_value}' '{trading_mode}' on {self.name}."
             )
 
     @classmethod
@@ -4074,7 +4074,7 @@ class Exchange:
 
         if self.trading_mode == TradingMode.FUTURES and self.margin_mode == MarginMode.ISOLATED:
             if market["inverse"]:
-                raise OperationalException("Freqtrade does not yet support inverse contracts")
+                raise OperationalException("FreqtradePro does not yet support inverse contracts")
 
             value = wallet_balance / amount
 
@@ -4085,7 +4085,7 @@ class Exchange:
                 return (open_rate - value) / (1 - mm_ratio_taker)
         else:
             raise OperationalException(
-                "Freqtrade only supports isolated futures for leverage trading"
+                "FreqtradePro only supports isolated futures for leverage trading"
             )
 
     def get_maintenance_ratio_and_amt(

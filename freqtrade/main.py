@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Main Freqtrade bot script.
+Main FreqtradePro bot script.
 Read the documentation to know what cli arguments you need.
 """
 
@@ -10,7 +10,7 @@ import sys
 
 # check min. python version
 if sys.version_info < (3, 11):  # pragma: no cover  # noqa: UP036
-    sys.exit("Freqtrade requires Python version >= 3.11")
+    sys.exit("FreqtradePro requires Python version >= 3.11")
 
 from freqtrade import __version__
 from freqtrade.commands import Arguments
@@ -46,16 +46,16 @@ def main(sysargv: list[str] | None = None) -> None:
             print_version_info()
             return_code = 0
         elif "func" in args:
-            logger.info(f"freqtrade {__version__}")
+            logger.info(f"FreqtradePro {__version__}")
             gc_set_threshold()
             set_mp_start_method()
             return_code = args["func"](args)
         else:
             # No subcommand was issued.
             raise OperationalException(
-                "Usage of Freqtrade requires a subcommand to be specified.\n"
+                "Usage of FreqtradePro requires a subcommand to be specified.\n"
                 "To have the bot executing trades in live/dry-run modes, "
-                "depending on the value of the `dry_run` setting in the config, run Freqtrade "
+                "depending on the value of the `dry_run` setting in the config, run FreqtradePro "
                 "as `freqtrade trade [options...]`.\n"
                 "To see the full list of options available, please use "
                 "`freqtrade --help` or `freqtrade <command> --help`."

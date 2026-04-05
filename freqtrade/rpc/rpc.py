@@ -169,7 +169,7 @@ class RPC:
             "unfilledtimeout": config.get("unfilledtimeout"),
             "use_custom_stoploss": config.get("use_custom_stoploss"),
             "order_types": config.get("order_types"),
-            "bot_name": config.get("bot_name", "freqtrade"),
+            "bot_name": config.get("bot_name", "FreqtradePro"),
             "timeframe": config.get("timeframe"),
             "timeframe_ms": timeframe_to_msecs(config["timeframe"]) if "timeframe" in config else 0,
             "timeframe_min": (

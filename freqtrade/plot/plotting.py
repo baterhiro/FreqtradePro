@@ -567,7 +567,7 @@ def generate_profit_graph(
             "Relative Drawdown",
         ],
     )
-    fig["layout"].update(title="Freqtrade Profit plot")
+    fig["layout"].update(title="FreqtradePro Profit plot")
     fig["layout"]["yaxis1"].update(title="Price")
     fig["layout"]["yaxis2"].update(title=f"Profit {stake_currency}")
     fig["layout"]["yaxis3"].update(title=f"Profit {stake_currency}")

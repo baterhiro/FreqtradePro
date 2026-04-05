@@ -297,7 +297,7 @@ class Hyperliquid(Exchange):
             return liq_price
         else:
             raise OperationalException(
-                "Freqtrade only supports isolated futures for leverage trading"
+                "FreqtradePro only supports isolated futures for leverage trading"
             )
 
     def get_funding_fees(

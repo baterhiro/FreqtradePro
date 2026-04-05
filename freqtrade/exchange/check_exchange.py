@@ -51,22 +51,22 @@ def check_exchange(config: Config, check_for_bad: bool = True) -> bool:
     if not valid:
         if check_for_bad:
             raise OperationalException(
-                f'Exchange "{exchange}"  will not work with Freqtrade. Reason: {reason}.'
+                f'Exchange "{exchange}"  will not work with FreqtradePro. Reason: {reason}.'
             )
         else:
             logger.warning(
-                f'Exchange "{exchange}"  will not work with Freqtrade. Reason: {reason}.'
+                f'Exchange "{exchange}"  will not work with FreqtradePro. Reason: {reason}.'
             )
 
     if MAP_EXCHANGE_CHILDCLASS.get(exchange, exchange) in SUPPORTED_EXCHANGES:
         logger.info(
-            f'Exchange "{exchange}" is officially supported by the Freqtrade development team.'
+            f'Exchange "{exchange}" is officially supported by the FreqtradePro development team.'
         )
     else:
         logger.warning(
             f'Exchange "{exchange}" is known to the ccxt library, '
             f"available for the bot, but not officially supported "
-            f"by the Freqtrade development team. "
+            f"by the FreqtradePro development team. "
             f"It may work flawlessly (please report back) or have serious issues. "
             f"Use it at your own discretion."
         )

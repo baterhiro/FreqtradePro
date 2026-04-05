@@ -160,7 +160,7 @@ class RemotePairList(IPairList):
         return pairlist
 
     def fetch_pairlist(self) -> tuple[list[str], float]:
-        headers = {"User-Agent": "Freqtrade/" + __version__ + " Remotepairlist"}
+        headers = {"User-Agent": "FreqtradePro/" + __version__ + " Remotepairlist"}
 
         if self._bearer_token:
             headers["Authorization"] = f"Bearer {self._bearer_token}"

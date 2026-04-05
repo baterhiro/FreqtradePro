@@ -378,7 +378,7 @@ class Arguments:
 
         # Build main command
         self.parser = ArgumentParser(
-            prog="freqtrade", description="Free, open source crypto trading bot"
+            prog="freqtrade", description="FreqtradePro - Free, open source crypto trading bot"
         )
         self._build_args(optionlist=ARGS_MAIN, parser=self.parser)
 
@@ -534,7 +534,7 @@ class Arguments:
         # Add edge subcommand
         edge_cmd = subparsers.add_parser(
             "edge",
-            help="Edge module. No longer part of Freqtrade",
+            help="Edge module. No longer part of FreqtradePro",
             parents=[_common_parser, _strategy_parser],
         )
         edge_cmd.set_defaults(func=start_edge)
