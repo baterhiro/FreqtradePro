@@ -121,3 +121,12 @@ docker-compose-*.yml
 __pycache__/
 /tmp/freqtrade.log
 nohup.out
+
+# Publish the live setup while keeping runtime data and credentials private.
+!user_data/config.live.json
+!user_data/config.live.private.example.json
+!user_data/start-live.sh
+!user_data/LIVE-SETUP.md
+!user_data/strategies/
+user_data/strategies/*
+!user_data/strategies/BaterHiro.py
